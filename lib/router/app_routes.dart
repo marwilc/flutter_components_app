@@ -33,13 +33,16 @@ class AppRoutes {
         icon: Icons.card_giftcard),
   ];
 
-  static Map<String, Widget Function(BuildContext)> routes = {
-    'home': (BuildContext context) => const HomeScreen(),
-    'listView1': (BuildContext context) => const ListView1Screen(),
-    'listView2': (BuildContext context) => const ListView2Screen(),
-    'alert': (BuildContext context) => const AlertScreen(),
-    'card': (BuildContext context) => const CardScreen()
-  };
+
+  static Map<String, Widget Function(BuildContext)> getAppRoutes(){
+    Map<String, Widget Function(BuildContext)> appRoutes = {    };
+
+    for (final option in menuOptions) {
+      appRoutes.addAll({option.route: (BuildContext context) => option.screen});
+    }
+
+    return appRoutes;
+  }
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {
     return MaterialPageRoute(
