@@ -28,7 +28,7 @@ class AppRoutes {
         icon: Icons.add_alert),
     MenuOption(
         route: 'card',
-        name: 'Cads',
+        name: 'Cards',
         screen: const CardScreen(),
         icon: Icons.card_giftcard),
   ];
