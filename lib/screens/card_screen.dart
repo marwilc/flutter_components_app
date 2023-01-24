@@ -16,11 +16,11 @@ class CardScreen extends StatelessWidget {
         children: const [
           CustomCardType1(),
           SizedBox(height: 10),
-          CustomCardType2(),
+          CustomCardType2(name: 'Paisaje', imageUrl: 'https://iso.500px.com/wp-content/uploads/2014/07/big-one.jpg'),
           SizedBox(height: 10),
-          CustomCardType2(),
+          CustomCardType2(imageUrl: 'https://fotoarte.com.uy/wp-content/uploads/2019/03/Landscape-fotoarte.jpg',),
           SizedBox(height: 10),
-          CustomCardType2(),
+          CustomCardType2(imageUrl: 'https://cdn3.dpmag.com/2021/07/Landscape-Tips-Mike-Mezeul-II.jpg'),
           SizedBox(height: 500),
 
         ],
